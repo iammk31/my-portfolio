@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,16 +15,16 @@ const Navbar = () => {
        
         <ul className="hidden md:flex space-x-6">
           <li>
-            <a href="#home" className="hover:text-gray-400">Home</a>
+            <Link to="/home" className="hover:text-gray-400">Home</Link>
           </li>
           <li>
-            <a href="#works" className="hover:text-gray-400">Works</a>
+            <Link to="/works" className="hover:text-gray-400">Works</Link>
           </li>
           <li>
-            <a href="#about" className="hover:text-gray-400">About</a>
+            <Link to="/about" className="hover:text-gray-400">About</Link>
           </li>
           <li>
-            <a href="#faq" className="hover:text-gray-400">FAQ</a>
+            <Link to="/faq" className="hover:text-gray-400">FAQ</Link>
           </li>
         </ul>
 
@@ -39,16 +40,16 @@ const Navbar = () => {
       {isOpen && (
         <ul className="md:hidden flex flex-col space-y-4 bg-gray-800 py-4 px-4">
           <li>
-            <a href="#home" className="block hover:text-gray-400">Home</a>
+            <Link to="/home" className="block hover:text-gray-400">Home</Link>
           </li>
           <li>
-            <a href="#works" className="block hover:text-gray-400">Works</a>
+            <Link to="/works" className="block hover:text-gray-400">Works</Link>
           </li>
           <li>
-            <a href="#about" className="block hover:text-gray-400">About</a>
+            <Link to="/about" className="block hover:text-gray-400">About</Link>
           </li>
           <li>
-            <a href="#faq" className="block hover:text-gray-400">FAQ</a>
+            <Link to="/faq" className="block hover:text-gray-400">FAQ</Link>
           </li>
         </ul>
       )}
